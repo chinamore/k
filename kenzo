@@ -122,6 +122,10 @@ source_Download(){
 		echo ""
 		echo " 	4.Lean_R9(最新版)_source"
 		echo ""
+		echo " 	5.原版openwrt(最新版)_source"
+		echo ""
+		echo " 	6.原版openwrt(最新版)_source"
+		echo ""
 		echo "	0.exit"
 		echo ""
 		echo ""
@@ -144,10 +148,18 @@ source_Download(){
 				git clone https://github.com/coolsnowwolf/lede.git lede
 				cd lede
 				;;
+				5)
+				git clone https://git.openwrt.org/openwrt/openwrt.git openwrt
+				cd openwrt
+				;;
+				6)
+				git clone https://git.openwrt.org/openwrt/openwrt.git lede
+				cd lede
+				;;
 				0)
 				exit;;
 				*)
-				clear && echo  "请输入正确的数字（1-4，0）" && Time
+				clear && echo  "请输入正确的数字（1-6，0）" && Time
 				source_Download
 				 ;;
 			esac
